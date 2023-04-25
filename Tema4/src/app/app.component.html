@@ -1,0 +1,42 @@
+<div class="container">
+  <form nz-form [formGroup]="loginForm" class="form" (ngSubmit)="register()">
+    <h1>Register</h1>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Name is missing or invalid">
+        <nz-input-group nzPrefixIcon="user">
+          <input nz-input type="text" placeholder="Name" [formControl]="name" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Email is missing or invalid (use reqres.in emails)">
+        <nz-input-group nzPrefixIcon="user">
+          <input nz-input type="email" placeholder="E-mail" [formControl]="email" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Write Male or Female">
+        <nz-input-group nzPrefixIcon="user">
+          <input nz-input type="text" placeholder="Gender" [formControl]="gender"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Phone number should have exactly 10 digits">
+        <nz-input-group nzPrefixIcon="lock">
+          <input nz-input type="tel" placeholder="Phone number" [formControl]="tel" pattern="[0-9]{10}"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Password should have at least 5 characters">
+        <nz-input-group nzPrefixIcon="lock">
+          <input nz-input type="password" placeholder="Password" [formControl]="password" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <input nz-input type="submit" value="Submit registration">
+    <p *ngIf="showServerError" nz-typography nzType="danger" style="color: red">Register failed!</p>
+  </form>
+</div>
