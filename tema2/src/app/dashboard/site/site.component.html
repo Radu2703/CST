@@ -1,9 +1,0 @@
-<div>
-<nz-card style="width:200px;border-color:black;align-items: center;">
-<button style="align-self: center" nz-button [nzType]="'primary'" (click)="showModal()"><span>Show Modal</span></button></nz-card>
-<nz-modal [(nzVisible)]="isVisible" nzTitle="The first president of the USA" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
-    <ng-container *nzModalContent>
-    <app-content *ngFor="let preObject of preList" [pre]="preObject"></app-content>
-    </ng-container>
-  </nz-modal>
-</div>
