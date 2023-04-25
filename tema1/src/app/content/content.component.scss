@@ -1,0 +1,12 @@
+.column {align-items: center;
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+.row {align-items: center;
+  margin: 0 -5px;}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

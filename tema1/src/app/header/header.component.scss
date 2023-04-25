@@ -1,0 +1,17 @@
+img {
+  width: 40%;
+  height: auto;
+  align-self: right;
+}
+.column {align-items: center;
+  float: left;
+  width: 58%;
+  padding: 1%;
+}
+.row {align-items: center;
+  margin: 0 -5px;}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
